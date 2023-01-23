@@ -1,6 +1,6 @@
 Name: Super-Linter
 
-On: push
+on: push
 
 jobs:
          super-lint:
@@ -14,4 +14,4 @@ uses: actions/checkout@v2
 uses: github/super-linter@v3
 env:
 	DEFAULT_BRANCH: main
-	GITHUB_TOKEN: ${{ secrets.GITHUB)TOKEN }}
+	GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
