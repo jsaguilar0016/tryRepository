@@ -1,4 +1,4 @@
-Name: Release
+name: Release_
 on:
 	push:
 		tags:
@@ -6,7 +6,7 @@ on:
 
 jobs:
 	release:
-		name: “Release”
+		name: “Release_”
 		runs-on: “Ubuntu-latest”
 		steps:
 			- uses: “marvinpinto/action-automatic-releases@latest”
