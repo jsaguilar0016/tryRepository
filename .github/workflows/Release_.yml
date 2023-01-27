@@ -2,7 +2,7 @@ Name: Release
 on:
 	push:
 		tags:
--	“v*”
+			- “v*”
 
 jobs:
 	release:
