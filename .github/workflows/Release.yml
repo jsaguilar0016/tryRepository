@@ -1,0 +1,15 @@
+Name: Release
+on:
+	push:
+		tags:
+			- “v*”
+
+jobs:
+	release:
+		name: “Release”
+		runs-on: “Ubuntu-latest”
+		steps:
+			- uses: “marvinpinto/action-automatic-releases@latest”
+				with:
+					repo_token: “${{ secrets.SECRET_CODE }}”
+					prerelease: false
