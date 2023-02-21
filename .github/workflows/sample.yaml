@@ -1,0 +1,28 @@
+name: My Workflow
+
+on:
+  repository_dispatch:
+    types: my-event
+
+jobs:
+  my-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print inputs
+        run: |
+          echo "Input 1: ${{ github.event.client_payload.input1 }}"
+          echo "Input 2: ${{ github.event.client_payload.input2 }}"
+          echo "Input 3: ${{ github.event.client_payload.input1 }}"
+          echo "Input 4: ${{ github.event.client_payload.input2 }}"
+          echo "Input 5: ${{ github.event.client_payload.input1 }}"
+          echo "Input 6: ${{ github.event.client_payload.input2 }}"
+          echo "Input 7: ${{ github.event.client_payload.input1 }}"
+          echo "Input 8: ${{ github.event.client_payload.input2 }}"
+          echo "Input 9: ${{ github.event.client_payload.input1 }}"
+          echo "Input 10: ${{ github.event.client_payload.input2 }}"
+          echo "Input 11: ${{ github.event.client_payload.input1 }}"
+          echo "Input 12: ${{ github.event.client_payload.input2 }}"
+          echo "Input 13: ${{ github.event.client_payload.input1 }}"
+          echo "Input 14: ${{ github.event.client_payload.input2 }}"
+          echo "Input 15: ${{ github.event.client_payload.input1 }}"
+          echo "Input 16: ${{ github.event.client_payload.input2 }}"
