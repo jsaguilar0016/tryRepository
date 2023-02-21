@@ -1,17 +1,28 @@
-name: Super-Linter
+name: My Workflow
 
-on: push
+on:
+  repository_dispatch:
+    types: my-event
 
 jobs:
-  super-lint:
-    name: Lint code base
+  my-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-  
-      - name: Run Super-Linter
-        uses: github/super-linter@v3.17.0
-        env:
-          DEFAULT_BRANCH: main
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Print inputs
+        run: |
+          echo "Input 1: ${{ github.event.client_payload.input1 }}"
+          echo "Input 2: ${{ github.event.client_payload.input2 }}"
+          echo "Input 3: ${{ github.event.client_payload.input1 }}"
+          echo "Input 4: ${{ github.event.client_payload.input2 }}"
+          echo "Input 5: ${{ github.event.client_payload.input1 }}"
+          echo "Input 6: ${{ github.event.client_payload.input2 }}"
+          echo "Input 7: ${{ github.event.client_payload.input1 }}"
+          echo "Input 8: ${{ github.event.client_payload.input2 }}"
+          echo "Input 9: ${{ github.event.client_payload.input1 }}"
+          echo "Input 10: ${{ github.event.client_payload.input2 }}"
+          echo "Input 11: ${{ github.event.client_payload.input1 }}"
+          echo "Input 12: ${{ github.event.client_payload.input2 }}"
+          echo "Input 13: ${{ github.event.client_payload.input1 }}"
+          echo "Input 14: ${{ github.event.client_payload.input2 }}"
+          echo "Input 15: ${{ github.event.client_payload.input1 }}"
+          echo "Input 16: ${{ github.event.client_payload.input2 }}"
